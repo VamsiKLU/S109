@@ -4,7 +4,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/HomePage';
-import AboutUs from './components/aboutus';
+import AboutUs from './components/Aboutus';
 import Computers from './components/Computers';
 import Mobiles from './components/Mobiles';
 import Laptops from './components/Laptops';
@@ -15,12 +15,14 @@ import Cart from './components/Cart';
 import Payment from './components/Payment';
 import Orders from './components/Orders';
 
+
+
 function App() {
   const [count, setCount] = useState(0)
   
   return (
     <>
-    <Router>
+    <Router basename="/S109">
       <Routes>
         <Route path="/" element={<HomePage />}>
           <Route index element={<AboutUs />} />
